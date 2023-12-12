@@ -4,7 +4,7 @@
 <h6 class="font-weight-bolder mb-0">Add Coupon</h6>
 <hr>
 
-<form style="width: 1500px;" action="{{ URL::to('insert-coupon-code') }}" method="post">
+<form style="width: 1500px;" action="{{ URL::to('/insert-coupon-code') }}" method="post">
   {{ csrf_field() }}
   <div class="form-group ">
     <label style="font-size:16px" class="font-weight-bolder mb-0">Coupon Name</label>

@@ -121,3 +121,20 @@ Route::get('/create-transaction', [PayPalController::class, 'createTransaction']
 Route::get('/process-transaction', [PayPalController::class, 'processTransaction'])->name('processTransaction');
 Route::get('/success-transaction', [PayPalController::class, 'successTransaction'])->name('successTransaction');
 Route::get('/cancel-transaction', [PayPalController::class, 'cancelTransaction'])->name('cancelTransaction');
+
+//User
+
+// ---------------------------------------- User Controller ----------------------------------------
+
+    Route::get('/admin/nguoi-dung', [UserController::class, 'index']);
+
+Route::group(['middleware' => 'admin.roles'], function() {
+    Route::get('/admin/them-nguoi-dung', [UserController::class, 'add_user']);
+    Route::get('/admin/xoa-nguoi-dung/{admin_id}', [UserController::class, 'delete_user_roles']);
+    Route::get('/admin/chuyen-quyen/{admin_id}', [UserController::class, 'users_transfer']);
+    Route::post('/admin/phan-quyen', [UserController::class, 'assign_roles']);
+    Route::post('/admin/luu-nguoi-dung', [UserController::class, 'store_users']);
+});
+Route::get('/admin/ngung-chuyen-quyen', [UserController::class, 'users_transfer_destroy']);
+
+Route::post('/them-khach-hang', [CheckoutController::class, 'add_customer']);

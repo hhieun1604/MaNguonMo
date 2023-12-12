@@ -12,16 +12,12 @@
     <title>Apple Store</title>
 
     <!-- Favicon  -->
-    <link rel="icon" type="image/x-icon" href="{{ url('public/FE/img/core-img/favicon.ico') }}">
-
-    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.2/css/pro.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="icon" href="{{ asset('/public/FE/img/core-img/favicon.ico') }}">
 
     <!-- Core Style CSS -->
-    <link rel="stylesheet" href="{{ asset('public/FE/css/core-style.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/FE/style.css') }}">
-    <script src="{{ asset('public/BE/ckeditor/ckeditor.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('/public/FE/css/core-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('/public/FE/style.css') }}">
+    <script src="{{ asset('/public/BE/ckeditor/ckeditor.js') }}"></script>
       <script>
         CKEDITOR.replace('editor');
         CKEDITOR.replace('editor1');
@@ -36,7 +32,7 @@
             <!-- Classy Menu -->
             <nav class="classy-navbar" id="essenceNav">
                 <!-- Logo -->
-                  <a class="nav-brand" href="{{ URL::to('/trangchu') }}"><img style="height: 40x; width: 90px;" src="{{ asset('public/FE/img/core-img/logo4.png') }}" alt=""></a>
+                  <a class="nav-brand" href="{{ URL::to('/trangchu') }}"><img style="height: 40x; width: 90px;" src="{{ asset('/public/FE/img/core-img/logo4.png') }}" alt=""></a>
                 <!-- Navbar Toggler -->
                 <div class="classy-navbar-toggler">
                     <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -85,25 +81,25 @@
                 <!-- Favourite Area -->
                 @if(session('id') != NULL )
                     <div class="favourite-area">
-                        <a href="{{ URL::to('/order-history') }}"><img src="{{ asset('public/FE/img/core-img/heart.svg') }}" alt=""></a>
+                        <a href="{{ URL::to('/order-history') }}"><img src="{{ asset('/public/FE/img/core-img/heart.svg') }}" alt=""></a>
                     </div>  
                 @endif 
 
                 @if(session('id') != NULL )
                 <div class="user-login-info">
-                    <a href="{{ URL::to('/customer', Auth::id()) }}"><img src="{{ asset('public/FE/img/core-img/user.svg') }}" alt=""></a>
+                    <a href="{{ URL::to('/customer', Auth::id()) }}"><img src="{{ asset('/public/FE/img/core-img/user.svg') }}" alt=""></a>
                 </div>
                 <div class="user-login-info">
-                    <a href="{{ URL::to('/logout') }}"><img src="{{ asset('public/FE/img/core-img/sign_out.svg') }}" alt=""></a>
+                    <a href="{{ URL::to('/logout') }}"><img src="{{ asset('/public/FE/img/core-img/sign_out.svg') }}" alt=""></a>
                 </div>
                 @else
                 <div class="user-login-info">
-                    <a href="{{ URL::to('/flogin') }}"><img src="{{ asset('public/FE/img/core-img/user.svg') }}" alt=""></a>
+                    <a href="{{ URL::to('/flogin') }}"><img src="{{ asset('/public/FE/img/core-img/user.svg') }}" alt=""></a>
                 </div>
                 @endif
                 <!-- Cart Area -->
                 <div class="cart-area">
-                    <a href="#" id="essenceCartBtn"><img src="{{ asset('public/FE/img/core-img/bag.svg') }}" alt=""> <span></span></a>
+                    <a href="#" id="essenceCartBtn"><img src="{{ asset('/public/FE/img/core-img/bag.svg') }}" alt=""> <span></span></a>
                 </div>
             </div>
 
@@ -118,7 +114,7 @@
 
         <!-- Cart Button -->
         <div class="cart-button">
-            <a href="#" id="rightSideCart"><img src="{{ asset('public/FE/img/core-img/bag.svg') }}" alt=""> <span></span></a>
+            <a href="#" id="rightSideCart"><img src="{{ asset('/public/FE/img/core-img/bag.svg') }}" alt=""> <span></span></a>
         </div>
 
         <div class="cart-content d-flex">
@@ -131,7 +127,7 @@
                 <!-- Single Cart Item -->
                 <div class="single-cart-item">
                     <a href="{{ URL::to('/delete-to-cart/'.$v_content-> rowId) }}" class="product-image" style="width: 200px; height: 200px;">
-                        <img src="{{ asset('public/uploads/product/'.$v_content-> options-> image) }}" class="cart-thumb" alt="">
+                        <img src="{{ asset('/public/uploads/product/'.$v_content-> options-> image) }}" class="cart-thumb" alt="">
                         <!-- Cart Item Desc -->
                         <div class="cart-item-desc">
                           <span class="product-remove"><i class="fa fa-close"  aria-hidden="true"></i></span>
@@ -179,25 +175,25 @@
         <div class="slider">
           <div class="slider-wrapper">
             <div class="slider-slide">
-              <img src="{{ asset('public/FE/img/banner-img/banner3.jpg') }}" alt="Slide 1">
+              <img src="{{ asset('/public/FE/img/banner-img/banner3.jpg') }}" alt="Slide 1">
             </div>
             <div class="slider-slide">
-              <img src="{{ asset('public/FE/img/banner-img/banner4.jpg') }}" alt="Slide 2">
+              <img src="{{ asset('/public/FE/img/banner-img/banner4.jpg') }}" alt="Slide 2">
             </div>
             <div class="slider-slide">
-              <img src="{{ asset('public/FE/img/banner-img/banner2.jpg') }}" alt="Slide 3">
+              <img src="{{ asset('/public/FE/img/banner-img/banner2.jpg') }}" alt="Slide 3">
             </div>
             <div class="slider-slide">
-              <img src="{{ asset('public/FE/img/banner-img/banner1.jpg') }}" alt="Slide 4">
+              <img src="{{ asset('/public/FE/img/banner-img/banner1.jpg') }}" alt="Slide 4">
             </div>
             <div class="slider-slide">
-              <img src="{{ asset('public/FE/img/banner-img/banner6.jpg') }}" alt="Slide 5">
+              <img src="{{ asset('/public/FE/img/banner-img/banner6.jpg') }}" alt="Slide 5">
             </div>
             <div class="slider-slide">
-              <img src="{{ asset('public/FE/img/banner-img/banner7.jpg') }}" alt="Slide 6">
+              <img src="{{ asset('/public/FE/img/banner-img/banner7.jpg') }}" alt="Slide 6">
             </div>
             <div class="slider-slide">
-              <img src="{{ asset('public/FE/img/banner-img/banner5.jpg') }}" alt="Slide 7">
+              <img src="{{ asset('/public/FE/img/banner-img/banner5.jpg') }}" alt="Slide 7">
             </div>
           </div>
           
@@ -291,13 +287,12 @@
                     <div class="single_widget_area d-flex mb-30">
                         <!-- Logo -->
                         <div class="footer-logo mr-50">
-                            <a href="#"><img src="{{ asset('public/FE/img/core-img/logo2.png') }}" alt=""></a>
+                            <a href="#"><img src="{{ asset('/public/FE/img/core-img/logo2.png') }}" alt=""></a>
                         </div>
                         <!-- Footer Menu -->
                         <div class="footer_menu">
                             <ul>
-                                <li><a href="{{ URL::to('/product-home') }}">Shop</a></li>
-
+                                <li><a href="shop.html">Shop</a></li>
                                 <li><a href="blog.html">Blog</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
@@ -320,7 +315,6 @@
             </div>
 
             <div class="row align-items-end">
-                <!--Facebook -->
                 <!-- Single Widget Area -->
                 <div class="col-12 col-md-6">
                     <div class="single_widget_area">
@@ -339,11 +333,11 @@
                 <div class="col-12 col-md-6">
                     <div class="single_widget_area">
                         <div class="footer_social_area">
-                            <a href="https://www.facebook.com/16.huuhieu" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="https://www.instagram.com/" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            <a href="https://twitter.com/convitne722" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="https://www.pinterest.com/pin/934004410204410918/" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                            <a href="https://www.youtube.com/@zenzydy/featured" data-toggle="tooltip" data-placement="top" title="Youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -364,17 +358,17 @@
     <!-- ##### Footer Area End ##### -->
 
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="{{ asset('public/FE/js/jquery/jquery-2.2.4.min.js') }}"></script>
+    <script src="{{ asset('/public/FE/js/jquery/jquery-2.2.4.min.js') }}"></script>
     <!-- Popper js -->
-    <script src="{{ asset('public/FE/js/popper.min.js') }}"></script>
+    <script src="{{ asset('/public/FE/js/popper.min.js') }}"></script>
     <!-- Bootstrap js -->
-    <script src="{{ asset('public/FE/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/public/FE/js/bootstrap.min.js') }}"></script>
     <!-- Plugins js -->
-    <script src="{{ asset('public/FE/js/plugins.js') }}"></script>
+    <script src="{{ asset('/public/FE/js/plugins.js') }}"></script>
     <!-- Classy Nav js -->
-    <script src="{{ asset('public/FE/js/classy-nav.min.js') }}"></script>
+    <script src="{{ asset('/public/FE/js/classy-nav.min.js') }}"></script>
     <!-- Active js -->
-    <script src="{{ asset('public/FE/js/active.js') }}"></script>
+    <script src="{{ asset('/public/FE/js/active.js') }}"></script>
 
 </body>
 

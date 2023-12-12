@@ -6,9 +6,9 @@
         <!-- Single Product Thumb -->
         <div class="single_product_thumb clearfix">
             <div style="text-align:center" class="product_thumbnail_slides owl-carousel">
-                <img  src="{{ asset('public/uploads/product/'.$value->product_img) }}" alt="">
-                <img  src="{{ asset('public/uploads/product/'.$value->product_img) }}" alt="">
-                <img  src="{{ asset('public/uploads/product/'.$value->product_img) }}" alt="">
+                <img  src="{{ asset('/public/uploads/product/'.$value->product_img) }}" alt="">
+                <img  src="{{ asset('/public/uploads/product/'.$value->product_img) }}" alt="">
+                <img  src="{{ asset('/public/uploads/product/'.$value->product_img) }}" alt="">
             </div>
         </div>
         <!-- Single Product Description -->
@@ -75,7 +75,7 @@
                         <div class="single-product-wrapper">
                            
                             <div class="product-img">
-                                <img src="{{ URL::to('public/uploads/product/'.$value->product_img) }}" alt="">
+                                <img src="{{ URL::to('/public/uploads/product/'.$value->product_img) }}" alt="">
                                 <div class="product-favourite">
                                     <a href="#" class="favme fa fa-heart"></a>
                                 </div>

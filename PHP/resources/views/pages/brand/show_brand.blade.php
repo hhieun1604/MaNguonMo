@@ -22,14 +22,14 @@
                         <div class="single-product-wrapper">
                            
                             <div class="product-img">
-                                <img src="{{ URL::to('/public/uploads/product/'.$product->product_img) }}" alt="">                 
+                                <img src="{{ URL::to(/public/uploads/product/'.$product->product_img) }}" alt="">                 
                                 <div class="product-favourite">
                                     <a href="#" class="favme fa fa-heart"></a>
                                 </div>
                             </div>                        
                             <div class="product-description">
                                 <span></span>
-                                <a href="{{ URL::to('/product-detail/'.$product->product_id) }}">
+                                <a href="{{ URL::to(/product-detail/'.$product->product_id) }}">
                                     <h6>{{($product->product_name)}}</h6>
                                 </a>
                                 <p class="product-price">{{number_format($product->product_price).' VNĐ'}}</p>
@@ -38,7 +38,7 @@
                                 <div class="hover-content">
                                    
                                     <div class="add-to-cart-btn">
-                                        <a href="{{ URL::to('/product-detail/'.$product->product_id) }}" class="btn essence-btn">Add to Cart</a>
+                                        <a href="{{ URL::to(/product-detail/'.$product->product_id) }}" class="btn essence-btn">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>

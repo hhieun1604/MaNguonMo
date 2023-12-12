@@ -55,7 +55,7 @@
 
                 </div>
                 <div class="card-body">
-                  <form action="{{ URL::to('/login') }}" method="post">
+                  <form action="{{ URL::to('//login') }}" method="post">
                     {{ csrf_field() }}
                     <label>Email</label>
                     <div class="mb-3">
@@ -69,14 +69,7 @@
                       <input class="form-check-input" type="checkbox" id="rememberMe" checked="">
                       <label class="form-check-label" for="rememberMe">Remember me</label>
                     </div>
-                    <hr>
-                                        <a href="" class="btn btn-google btn-user btn-block">
-                                            <i class="fab fa-google fa-fw"></i> Đăng nhập với Google
-                                        </a>
-                                        <a href="" class="btn btn-facebook btn-user btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Đăng nhập với Facebook
-                                        </a>
-                                        
+                    
                     <?php 
                     $message = Session::get('message');
                     if($message){
@@ -88,19 +81,15 @@
                     <div class="text-center">
                       <button type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0">Sign in</button>
                     </div>
-
-                    
-
                   </form>
                 </div>
-                
                 <div class="card-footer text-center pt-0 px-lg-2 px-1">
                   <p class="mb-4 text-sm mx-auto">
                     Don't have an account?
-                    <a href="{{ URL::to('/fregistor') }}" class="text-info text-gradient font-weight-bold">Sign up</a>
+                    <a href="{{ URL::to('//fregistor') }}" class="text-info text-gradient font-weight-bold">Sign up</a>
                   </p>
                 </div>
-                <a href="{{ URL::to('/trangchu') }}" class="btn bg-gradient-info w-100 mt-4 mb-0">Back Home</a>
+                <a href="{{ URL::to('//trangchu') }}" class="btn bg-gradient-info w-100 mt-4 mb-0">Back Home</a>
               </div>
             </div>
             <div class="col-md-6">

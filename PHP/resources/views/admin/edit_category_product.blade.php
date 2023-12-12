@@ -5,7 +5,7 @@
 
 <hr>
 @foreach($edit_category_product as $key => $edit_value)
-<form style="width: 1500px;" action="{{ URL::to('/update-category-product/'.$edit_value->category_id) }}" method="post">
+<form style="width: 1500px;" action="{{ URL::to(/update-category-product/'.$edit_value->category_id) }}" method="post">
   {{ csrf_field() }}
   <div class="form-group ">
     <label style="font-size:16px" class="font-weight-bolder mb-0">Category Name</label>

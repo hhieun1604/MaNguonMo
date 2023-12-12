@@ -4,7 +4,7 @@
 <h6 class="font-weight-bolder mb-0">Add Product</h6>
 <hr>
 
-<form style="width: 1500px;" action="{{ URL::to('/php/save-product') }}" method="post" enctype="multipart/form-data">
+<form style="width: 1500px;" action="{{ URL::to('/save-product') }}" method="post" enctype="multipart/form-data">
   {{ csrf_field() }}
   <div class="form-group ">
     <label style="font-size:16px" class="font-weight-bolder mb-0">Product Name</label>

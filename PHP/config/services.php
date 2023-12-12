@@ -31,10 +31,4 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
-    'facebook' => [
-        'client_id' => '836266728157852',  //client face của bạn
-        'client_secret' => 'a6093d3c7fd72a27bc315abf81ba3d7e',  //client app service face của bạn
-        'redirect' => 'http://localhost/laravel/la_project/admin/callback' //callback trả về
-    ],
-
 ];
